@@ -12,6 +12,7 @@
 
 // Method 2. This function achieves the same result using a switch statement instead of an array.
 
+
 function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * 3);
     switch (randomIndex) {
@@ -27,4 +28,15 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice());
+
+// Write a function that prompts the user to enter their choice of rock, paper, or scissors, 
+// and returns the user's input.
+
+function getHumanChoice() {
+    const userInput = prompt("Please enter rock, paper, or scissors:");
+
+}
+
+console.log(getHumanChoice());
+
 
