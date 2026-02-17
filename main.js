@@ -40,3 +40,10 @@ function getHumanChoice() {
 console.log(getHumanChoice());
 
 
+// This code initializes two variables, humanScore and computerScore, to keep track of the scores for the human player and the computer in a game of rock-paper-scissors. Both scores are initially set to 0.
+
+const humanScore = 0;
+const computerScore = 0;
+
+// This function takes the user's choice and the computer's choice as arguments,
+// compares them, and determines the winner of the game. It returns a string indicating the result.
