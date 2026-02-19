@@ -40,10 +40,24 @@ function getHumanChoice() {
 console.log(getHumanChoice());
 
 
-// This code initializes two variables, humanScore and computerScore, to keep track of the scores for the human player and the computer in a game of rock-paper-scissors. Both scores are initially set to 0.
+// This code initializes two variables, humanScore and computerScore, 
+// to keep track of the scores for the human player and the computer in a game of rock-paper-scissors. Both scores are initially set to 0.
 
 const humanScore = 0;
 const computerScore = 0;
 
 // This function takes the user's choice and the computer's choice as arguments,
 // compares them, and determines the winner of the game. It returns a string indicating the result.
+
+function playRound(humanChoice, computerChoice) {        
+    if (humanChoice === computerChoice) {
+        return "It's a tie!";
+    }   else if ((humanChoice === 'rock' && computerChoice === 'scissors') ||
+               (humanChoice === 'paper' && computerChoice === 'rock') ||
+               (humanChoice === 'scissors' && computerChoice === 'paper')) {
+        return "You win!";
+    }   else {
+        return "Computer wins!";
+    }
+    
+}
