@@ -27,17 +27,17 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
+
 
 // Write a function that prompts the user to enter their choice of rock, paper, or scissors, 
 // and returns the user's input.
 
 function getHumanChoice() {
     const userInput = prompt("Please enter rock, paper, or scissors:");
-
+    return userInput.toLowerCase();
 }
 
-console.log(getHumanChoice());
+
 
 
 // This code initializes two variables, humanScore and computerScore, 
@@ -66,3 +66,4 @@ const humanChoice = getHumanChoice();
 const computerChoice = getComputerChoice();
 
 console.log(playRound(humanChoice, computerChoice));
+
