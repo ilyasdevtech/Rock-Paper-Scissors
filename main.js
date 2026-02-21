@@ -40,10 +40,10 @@ function playGame() {
             humanScore++;
         } else if (result === "Computer wins!") {
             computerScore++;
-        };
+        }
     console.log(`Round ${round}: ${result} Human Score: ${humanScore}, 
                 Computer Score: ${computerScore}`);
-    };
+    }
     // Determine the overall winner after 5 rounds and return a message with the final scores.
         if (humanScore > computerScore) {
             return `Congratulations! You won the game ${humanScore}–${computerScore}!`;
@@ -51,7 +51,7 @@ function playGame() {
             return `Sorry, you lost the game ${humanScore}–${computerScore}. Better luck next time!`;
         } else {
             return `It's a tie game ${humanScore}–${computerScore}!`;
-        };
+        }
     // This function determines the winner of a single round of rock-paper-scissors 
     // based on the choices made by the human and the computer.
     function playRound(humanChoice, computerChoice) {   
@@ -63,10 +63,8 @@ function playGame() {
             return "You win!";
         }   else {
             return "Computer wins!";
-        };
+        }
     }
-
-
 }
 
 console.log(playGame());
