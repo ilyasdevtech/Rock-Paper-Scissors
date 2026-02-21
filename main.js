@@ -12,7 +12,6 @@
 
 // Method 2. This function achieves the same result using a switch statement instead of an array.
 
-
 function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * 3);
     switch (randomIndex) {
@@ -27,43 +26,30 @@ function getComputerChoice() {
     }
 }
 
-
-
-// Write a function that prompts the user to enter their choice of rock, paper, or scissors, 
-// and returns the user's input.
-
 function getHumanChoice() {
     const userInput = prompt("Please enter rock, paper, or scissors:");
     return userInput.toLowerCase();
 }
 
-
-
-
-// This code initializes two variables, humanScore and computerScore, 
-// to keep track of the scores for the human player and the computer in a game of rock-paper-scissors. Both scores are initially set to 0.
-
-const humanScore = 0;
-const computerScore = 0;
-
-// This function takes the user's choice and the computer's choice as arguments,
-// compares them, and determines the winner of the game. It returns a string indicating the result.
-
-function playRound(humanChoice, computerChoice) {        
-    if (humanChoice === computerChoice) {
-        return "It's a tie!";
-    }   else if ((humanChoice === 'rock' && computerChoice === 'scissors') ||
-               (humanChoice === 'paper' && computerChoice === 'rock') ||
-               (humanChoice === 'scissors' && computerChoice === 'paper')) {
-        return "You win!";
-    }   else {
-        return "Computer wins!";
+function playGame() {
+    const humanScore = 0;
+    const computerScore = 0;  
+    function playRound(humanChoice, computerChoice) {   
+        if (humanChoice === computerChoice) {
+            return "It's a tie!";
+        }   else if ((humanChoice === 'rock' && computerChoice === 'scissors') ||
+                (humanChoice === 'paper' && computerChoice === 'rock') ||
+                (humanChoice === 'scissors' && computerChoice === 'paper')) {
+            return "You win!";
+        }   else {
+            return "Computer wins!";
+        }
     }
-    
+
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
+    const result = playRound(humanChoice, computerChoice);
+    console.log(result);
 }
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
-
-console.log(playRound(humanChoice, computerChoice));
-
+console.log(playGame());
